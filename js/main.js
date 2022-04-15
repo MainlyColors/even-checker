@@ -14,7 +14,7 @@ const outputEl = document.querySelector('#output');
 function getFetch() {
   const choice = document.querySelector('input').value;
 
-  if (choice.match(/[^0-9]+/g)?.length <= 0) {
+  if (choice.match(/[^0-9-]+/g)?.length <= 0) {
     document.querySelector('input').value = '';
     alert(`can you not read? Numbers only 😂
 
@@ -22,7 +22,7 @@ function getFetch() {
     return;
   }
 
-  const url = `https://api.isevenapi.xyz/api/iseven/${choice}/`;
+  const url = `https://api.isevenapi.xyz/api/iseven/${Math.abs(choice)}/`;
 
   fetch(url)
     .then((res) => res.json()) // parse response as JSON
