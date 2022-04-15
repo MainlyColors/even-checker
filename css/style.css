@@ -95,3 +95,20 @@ h2,
 h3 {
   margin: 0;
 }
+
+.result {
+  margin-top: 100px;
+  color: var(--text-primary);
+  font-size: 72px;
+  font-weight: 700;
+  padding: 40px 60px;
+  border-radius: 50px;
+}
+
+.true {
+  background-color: #4bb543;
+}
+
+.false {
+  background-color: #ff3333;
+}
